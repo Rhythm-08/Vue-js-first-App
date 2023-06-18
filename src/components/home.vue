@@ -1,7 +1,6 @@
 <template>
-    <h1 v-on:mousemove="getConsole()">Home Component</h1>
-    <button v-on:click="getData('Button 1 Clicked')">Click Me</button>
-    <button v-on:dblclick="getData('Button 1 Clicked')">Double Click Me</button>
+    <h1 >Home Component</h1>
+    <input  type="text" placeholder="enter here" v-model="count"/>
     <h2>{{ count }}</h2>
 </template>
 
@@ -13,15 +12,6 @@ export default {
             count:0
         }
     },
-    methods:{
-    getData(data){
-        alert(data);
-    },
-    getConsole(){
-        this.count++;
-        console.log('Function Called')
-    }
-}
     
 }
 
