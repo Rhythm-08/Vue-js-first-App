@@ -1,35 +1,34 @@
 <!-- This is HTML Code  -->
 
 <template>
-
-<h2>{{ 2+3+5 }}</h2>
-<h2>{{ 5+10+15 }}</h2>
-<h2>Add method - {{ add(2,3,4) }}</h2>
-<h2>Multiply method - {{ multiply(6) }}</h2>
+<home/>
+<h1>Email {{ email }}</h1>
+<h1>Name {{ getName() }}</h1>
+<h1>Mobile {{ mobile =7777 }}</h1>
 </template>
-
-
-
 
 
 <!-- This is JS Code  -->
 <script>
-
+ import home from './components/home.vue'
 
 export default {
+  components:{
+    home
+  },
   name: 'abbBolNaMadarChod',
   data() {
     return {
-      baseMultiplier: 5
+      baseMultiplier: 5,
+      email:'rhythm@gmail.com',
+      mobile:89898,
+      getName :function(){
+        return 'Rhythm Sharma';
+      }
     }
   },
   methods:{
-    add(a,b,c){
-      return a+b+c;
-    },
-    multiply(number){
-      return number * this.baseMultiplier;
-    }
+  
   }
 }
 
