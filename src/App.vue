@@ -1,21 +1,16 @@
 <!-- This is HTML Code  -->
 
 <template>
-<home/>
-<h1>Email {{ email }}</h1>
-<h1>Name {{ getName() }}</h1>
-<h1>Mobile {{ mobile =7777 }}</h1>
+  <router-link to="Home">Home </router-link>
+<router-view></router-view>
 </template>
 
 
 <!-- This is JS Code  -->
 <script>
- import home from './components/home.vue'
 
 export default {
-  components:{
-    home
-  },
+  
   name: 'abbBolNaMadarChod',
   data() {
     return {
